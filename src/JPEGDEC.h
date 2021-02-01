@@ -19,7 +19,12 @@
 #include <stdint.h>
 #include <stdio.h>
 #else
-#include <Arduino.h>
+//#include <stdlib.h>
+#include <string.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <esp_attr.h>
+//#include <Arduino.h>
 #endif
 #ifndef PROGMEM
 #define memcpy_P memcpy
@@ -242,7 +247,6 @@ int JPEG_getSubSample(JPEGIMAGE *pJPEG);
 int JPEG_hasThumb(JPEGIMAGE *pJPEG);
 int JPEG_getThumbWidth(JPEGIMAGE *pJPEG);
 int JPEG_getThumbHeight(JPEGIMAGE *pJPEG);
-int JPEG_getLastError(JPEGIMAGE *pJPEG);
 void JPEG_setPixelType(JPEGIMAGE *pJPEG, int iType); // defaults to little endian
 void JPEG_setMaxOutputSize(JPEGIMAGE *pJPEG, int iMaxMCUs);
 #endif // __cplusplus
